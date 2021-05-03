@@ -1,3 +1,4 @@
+import React from "react";
 import "./Modal.css";
 
 const Modal = (props) => {
@@ -5,7 +6,7 @@ const Modal = (props) => {
     props.onConfirm();
   };
   return (
-    <div>
+    <React.Fragment>
       <div className="backdrop" />
       <div className="modal">
         <header>
@@ -18,7 +19,7 @@ const Modal = (props) => {
           </button>
         </footer>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
