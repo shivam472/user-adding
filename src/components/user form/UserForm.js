@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "../UI/Modal";
 import "./UserForm.css";
 
@@ -43,7 +43,7 @@ const UserForm = (props) => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       {error && (
         <Modal
           title={error.title}
@@ -66,7 +66,7 @@ const UserForm = (props) => {
         ></input>
         <button type="submit">Add User</button>
       </form>
-    </div>
+    </React.Fragment>
   );
 };
 

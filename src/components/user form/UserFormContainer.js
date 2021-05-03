@@ -1,3 +1,4 @@
+import React from "react";
 import UserForm from "./UserForm";
 import "./UserFormContainer.css";
 
@@ -7,11 +8,11 @@ const UserFormContainer = (props) => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <div className="user-form-container">
         <UserForm onSubmission={infoCollectionHandler} />
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
