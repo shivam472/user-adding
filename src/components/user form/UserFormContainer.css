@@ -1,0 +1,9 @@
+.user-form-container {
+  background-color: #fff;
+  width: 35rem;
+  height: 12rem;
+  margin-top: 3rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,12 @@
+.user-info-box {
+  width: 90%;
+  height: 1.8rem;
+  border: 1px solid gray;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+  z-index: 10;
+}

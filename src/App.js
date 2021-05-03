@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import UserFormContainer from "./components/user form/UserFormContainer";
+import UserInfoContainer from "./components/UserInfo/UserInfoContainer";
+import "./App.css";
 
+const USER_INFO = [];
 function App() {
+  const [userInfo, setUserInfo] = useState(USER_INFO);
+
+  const infoAddHandler = (newUserInfo) => {
+    const newUserData = {
+      ...newUserInfo,
+      id: Math.random().toString(),
+    };
+    setUserInfo((prevUserInfo) => [...prevUserInfo, newUserData]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserFormContainer onInfoReceived={infoAddHandler} />
+      <UserInfoContainer
+        newUserInformation={userInfo}
+        userListLength={userInfo.length}
+      />
     </div>
   );
 }
